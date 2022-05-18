@@ -1,3 +1,3 @@
 #!/bin/bash
 
-clang -static -o fsperf main.c
+gcc -std=c11 -o fsperf main.c
