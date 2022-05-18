@@ -13,8 +13,6 @@ void readDirect(char *filePath, size_t size, FILE *outFile) {
     FILE *fp = fopen(filePath, "r");
     char buffer[BUF_SIZE];
 
-    int numChunks = size / BUF_SIZE;
-
     for (size_t i = 0; i < size; i += BUF_SIZE) {
         size_t readSize = BUF_SIZE;
         //fprintf(stdout, "%ld, %ld, %ld\n", i, readSize, size);
