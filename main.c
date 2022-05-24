@@ -55,6 +55,11 @@ void readMmap(char *filePath, size_t size, size_t bufSize, FILE *outFile) {
 
 int main (int argc, char** argv) {
 
+    if (argc != 5) {
+        fprintf(stderr, "Usage: %s COMMAND BUF_SIZE INFILE OUTFILE\n", argv[0]);
+        exit(1);
+    }
+
     char* command = argv[1];
     size_t bufSize = atoi(argv[2]);
     char* filePath = argv[3];
