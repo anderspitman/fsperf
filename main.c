@@ -126,7 +126,7 @@ int main (int argc, char** argv) {
     double gbps = ((double)st.st_size / 1000000000.0) / elapsedSeconds;
 
     fprintf(stderr, "%lu bytes copied in %.3lf seconds (%.3lf GB/s)\n", st.st_size, elapsedSeconds, gbps);
-    fprintf(stdout, "command\tbufSize\tfileSize\telapsedSeconds\tGB/s\n");
+    //fprintf(stdout, "command\tbufSize\tfileSize\telapsedSeconds\tGB/s\n");
     fprintf(stdout, "%s\t%d\t%lu\t%lf\t%.3lf\n", command, bufSize, st.st_size, elapsedSeconds, gbps);
 
     return(0);
